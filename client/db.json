@@ -1,0 +1,16 @@
+{
+  "courses": [
+    {
+      "id": "1",
+      "name": "Full Stack Development",
+      "duration": "1 Year",
+      "mode": "Offline"
+    },
+    {
+      "id": 2,
+      "name": "React Js",
+      "duration": "1 month",
+      "mode": "offline"
+    }
+  ]
+}

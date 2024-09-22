@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* 
+font-family: "Noto Sans Mono", monospace; 
+font-family: "Poppins", sans-serif;
+*/
+body {
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+}
+header {
+  width: 100%;
+  background-color: #333;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0.5em 1em rgba(0 0 0 /10%);
+}
+nav {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #999;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+}
+.container {
+  margin: 5em auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-group .btn {
+  font-size: 1.35em;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.2em 1em;
+  text-transform: uppercase;
+  border-right: 1px solid #fff;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+}
+.btn-group .btn:last-child {
+  border-right: none;
+}
+.title {
+  font-size: 3em;
+  color: #222;
+  text-transform: capitalize;
+  letter-spacing: 1.2px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+.signup {
+  width: clamp(200px, 50%, 350px);
+  box-shadow: 0 0.8em 1.5em rgba(0 0 0 /20%);
+  border-radius: 1em;
+  padding: 1em 2em;
+  text-align: center;
+  border: 0.2px solid #ccc;
+}
+.signup h2 {
+  font-size: 2.3em;
+  color: #333;
+  letter-spacing: 1px;
+  margin-bottom: 1.3em;
+  text-decoration: underline;
+}
+.signup form {
+  width: 80%;
+  margin: auto;
+}
+.signup form .input-Box {
+  width: 100%;
+  margin: 2em auto;
+}
+.signup form .input-Box input {
+  width: 100%;
+  outline: none;
+  border: 0.1px solid #999;
+  padding: 0.7em;
+  border-radius: 0.5em;
+}
+::placeholder {
+  color: #999;
+}
+.signup .input-Box .btn {
+  display: inline-block;
+  width: clamp(80px, 50%, 200px);
+  margin: auto;
+  padding: 0.7em;
+  border-radius: 0.5em;
+  outline: none;
+  border: none;
+  background-color: #1572dc;
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 0.5em;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+.signup .input-Box .btn:hover {
+  background-color: #1161bd;
+}
+.signup .link {
+  font-size: 1.3em;
+  letter-spacing: 0.8px;
+  color: #333;
+  margin-bottom: 1em;
+}
+.signup .link-btn {
+  font-weight: 600;
+  margin-right: 3px;
+}
+.logout {
+  border: none;
+  outline: none;
+  text-decoration: underline;
+  color: #444;
+  font-size: 0.9em;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  cursor: pointer;
+}
+.formCourse {
+  display: flex;
+  margin: 2em 0;
+  gap: 10px;
+}
+.course-list {
+  position: relative;
+  width: 100%;
+}
+.course-list .course-title {
+  position: absolute;
+  right: 10px;
+  top: -40px;
+}
+.container-form {
+  max-width: 100%;
+  width: 750px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.formCourse {
+  flex-wrap: wrap;
+  align-items: center;
+}
+.formCourse .add_btn {
+  border: none;
+  outline: none;
+  padding: 0.3em 3em;
+  background-color: #1572dc;
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+table {
+  width: 100%;
+  text-align: left;
+  font-family: "Noto Sans Mono", monospace;
+  border: 1px solid #fff;
+  border-collapse: collapse;
+  background-color: #1572dc;
+  color: #fff;
+}
+table tr th {
+  font-size: 1.35em;
+  text-transform: uppercase;
+  background-color: #072e5b;
+}
+table tr th,
+table tr td {
+  border: 1px solid #fff;
+  height: 40px;
+  padding-left: 0.5em;
+  cursor: pointer;
+}
+table tr td {
+  font-size: 1.15em;
+}
+table tr:hover {
+  background-color: #0a3a72;
+}
+table .add_btn {
+  padding: 0.3rem 1.5rem;
+  margin-left: 0.5em;
+  border: none;
+  outline: none;
+  background-color: #333;
+  color: #fff;
+  text-transform: capitalize;
+  border-radius: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  body {
+    font-size: 50%;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    font-size: 40%;
+  }
+}
