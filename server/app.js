@@ -36,51 +36,6 @@ app.use(
   })
 );
 
-let courses = [
-  { id: 1, name: "React", duration: "2 months", mode: "Online" },
-  { id: 2, name: "Node.js", duration: "3 months", mode: "Offline" },
-  { id: 3, name: "MongoDB", duration: "1 month", mode: "Online" },
-];
-
-// GET all courses
-app.get("/courses", (req, res) => {
-  res.json(courses);
-});
-
-// POST a new course
-app.post("/courses", (req, res) => {
-  const newCourse = { id: courses.length + 1, ...req.body };
-  courses.push(newCourse);
-  res.status(201).json(newCourse);
-});
-
-// PUT (update) a course
-app.put("/courses/:id", (req, res) => {
-  const courseId = parseInt(req.params.id, 10);
-  const courseIndex = courses.findIndex((course) => course.id === courseId);
-
-  if (courseIndex === -1) {
-    return res.status(404).send("Course not found");
-  }
-
-  const updatedCourse = { id: courseId, ...req.body };
-  courses[courseIndex] = updatedCourse;
-  res.json(updatedCourse);
-});
-
-// DELETE a course
-app.delete("/courses/:id", (req, res) => {
-  const courseId = parseInt(req.params.id, 10);
-  const courseIndex = courses.findIndex((course) => course.id === courseId);
-
-  if (courseIndex === -1) {
-    return res.status(404).send("Course not found");
-  }
-
-  courses.splice(courseIndex, 1);
-  res.status(204).send();
-});
-
 // Server listener
 app.listen(process.env.PORT, () => {
   console.log(`Server listening on port ${process.env.PORT}`);
