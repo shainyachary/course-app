@@ -8,10 +8,10 @@ const Navbar = () => {
           CourseEra
         </Link>
         <div className="btn-group">
-          <Link to="/login" className="btn">
+          <Link to="/login" className="btn-header">
             Login
           </Link>
-          <Link to="/signup" className="btn">
+          <Link to="/signup" className="btn-header">
             Sign-Up
           </Link>
         </div>

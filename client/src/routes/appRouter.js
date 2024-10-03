@@ -3,7 +3,9 @@ import App from "../App";
 import Login from "../components/Login";
 import SignUp from "../components/SignUp";
 import Home from "../pages/Home";
-import CourseList from "../components/CourseList";
+import CourseLists from "../components/CourseLists";
+import CourseEdit from "../components/CourseEdit";
+import CourseCreate from "../components/CourseCreate";
 
 export const appRouter = createBrowserRouter([
   {
@@ -24,7 +26,15 @@ export const appRouter = createBrowserRouter([
       },
       {
         path: "/courselist",
-        element: <CourseList />,
+        element: <CourseLists />,
+      },
+      {
+        path: "/course/edit/:cid",
+        element: <CourseEdit />,
+      },
+      {
+        path: "/course/create",
+        element: <CourseCreate />,
       },
     ],
   },

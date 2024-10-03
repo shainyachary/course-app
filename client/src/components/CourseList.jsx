@@ -29,10 +29,10 @@ const CourseList = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    const c_id = data.length + 1;
+    const id = data.length + 1;
     axios
-      .post("http://localhost:3000/courses", {
-        id: c_id,
+      .post("http://localhost:5000/courses/", {
+        id: id,
         name,
         duration,
         mode,
@@ -45,7 +45,7 @@ const CourseList = () => {
 
   const handleEdit = (id) => {
     axios
-      .get("http://localhost:3000/courses/" + id)
+      .get("http://localhost:5000/courses/" + id)
       .then((response) => {
         setUName(response.data.name);
         setUDuration(response.data.duration);
@@ -59,19 +59,22 @@ const CourseList = () => {
 
   const handleUpdate = () => {
     axios
-      .put("http://localhost:3000/courses/" + editId, {
+      .put("http://localhost:5000/courses/" + editId, {
         id: editId,
         name: uname,
         duration: uduration,
         mode: umode,
       })
-      .then((result) => window.location.reload())
+      .then((result) => {
+        console.log(result);
+        window.location.reload();
+      })
       .catch((err) => console.log(err));
   };
 
   const handleDelete = (id) => {
     axios
-      .delete("http://localhost:3000/courses/" + id)
+      .delete("http://localhost:5000/courses/" + id)
       .then((response) => {
         window.location.reload();
       })
@@ -132,9 +135,9 @@ const CourseList = () => {
             </tr>
           </thead>
           <tbody>
-            {data.map((course) =>
-              course.id === editId ? (
-                <tr key={course?.id}>
+            {data.map((course, index) =>
+              course?.id === editId ? (
+                <tr>
                   <td>
                     <input
                       type="text"
@@ -163,7 +166,7 @@ const CourseList = () => {
                   </td>
                 </tr>
               ) : (
-                <tr key={course?.id}>
+                <tr key={index}>
                   <td>{course?.name}</td>
                   <td>{course?.duration}</td>
                   <td>{course?.mode}</td>

@@ -2,15 +2,27 @@
   "courses": [
     {
       "id": "1",
-      "name": "Full Stack Development",
-      "duration": "1 Year",
+      "name": "Course 1",
+      "duration": "4 weeks",
       "mode": "Offline"
     },
     {
-      "id": 2,
-      "name": "React Js",
-      "duration": "1 month",
-      "mode": "offline"
+      "id": "2",
+      "name": "Course 2",
+      "duration": "2 Month",
+      "mode": "Offline/Online"
+    },
+    {
+      "id": "3",
+      "name": "Course 3",
+      "duration": "1 Week",
+      "mode": "Online"
+    },
+    {
+      "id": 4,
+      "name": "Course 4",
+      "duration": "1 week",
+      "mode": "Online"
     }
   ]
 }
