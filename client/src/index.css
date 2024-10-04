@@ -249,6 +249,7 @@ table .add_btn {
   padding: 0.5em 3em;
   color: #fff;
   border-radius: 0.8em;
+  cursor: pointer;
 }
 .btn.green {
   background-color: rgb(1, 100, 1);
