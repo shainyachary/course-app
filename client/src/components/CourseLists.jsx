@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Logout from "./Logout";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const CourseLists = () => {
-  const location = useLocation();
-  const user = location.state;
   const navigate = useNavigate();
 
   const [courses, setCourses] = useState([]);
